@@ -199,7 +199,7 @@ def user_stats(df):
 def raw_data(df):
     user_input = input('Do you want to see raw data? Enter any key(s) to continue or no to exit.\n')
     row_number = 0
-
+# While loop for returning only 5 rows at a time
     while True :
         if user_input.lower() != 'no':
             print(df.iloc[row_number : row_number + 5])
