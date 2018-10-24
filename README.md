@@ -4,7 +4,7 @@
 BikeShare Data Analysis
 
 ### Description
-Describe what your project is about and what it does
+Analysing Bikeshare data for 3 cities using Python's NumPy and Panda libraries
 
 ### Files used
 Include the files used
