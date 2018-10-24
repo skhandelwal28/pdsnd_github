@@ -42,7 +42,7 @@ def get_filters():
             break
         else:
             print("Invalid Day entered,please try again.Valid values are: monday or tuesday or wednesday or thursday or friday or saturday or sunday or all(for no day filter)")
-
+    # Print hyphen (-) 40 times for more clean user screen
     print('-'*40)
     return city, month, day
 
@@ -113,6 +113,7 @@ def time_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
+    # Print hyphen (-) 40 times for more clean user screen
     print('-'*40)
 
 
@@ -136,6 +137,7 @@ def station_stats(df):
     print('Most frequent used combinations is:{} to {}'.format(common_station.split('*')[0], common_station.split('*')[1]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
+    # Print hyphen (-) 40 times for more clean user screen
     print('-'*40)
 
 
@@ -162,6 +164,7 @@ def trip_duration_stats(df):
     print('\nMean travel time: {} seconds'.format(mean_travel_time))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
+    # Print hyphen (-) 40 times for more clean user screen
     print('-'*40)
 
 
@@ -190,12 +193,13 @@ def user_stats(df):
         print("\nMost common year of birth: " + str(common_birth_year))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
+    # Print hyphen (-) 40 times for more clean user screen
     print('-'*40)
 
 def raw_data(df):
     user_input = input('Do you want to see raw data? Enter any key(s) to continue or no to exit.\n')
     row_number = 0
-
+# While loop for returning only 5 rows at a time
     while True :
         if user_input.lower() != 'no':
             print(df.iloc[row_number : row_number + 5])
@@ -219,4 +223,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-        
